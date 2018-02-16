@@ -19,7 +19,7 @@
 \usepackage[table]{xcolor}
 \usepackage{amsfonts,graphicx,amsmath,hyperref}
 \title{Habib University\\CS-113 Discrete Mathematics\\Spring 2018\\HW 2}
-\author{$<your ID>$}  % replace with your ID, e.g. oy02945
+\author{$<ea03876>$}  % replace with your ID, e.g. oy02945
 \date{Due: 19h, 16th February, 2018}
 
 
@@ -48,13 +48,28 @@
   \end{center}
 
   \begin{solution}
-    % Write your solution here
+    $Partial:$
+    
+    $Domain$: All positive real numbers
+    
+    $Codomain$: Real numbers
+    
+    $Set of values$: All positive real numbers
+    
+    
+    $Total$: 
+    
+    $Domain$: All real numbers
+    
+    $Codomain$: Complex numbers (which includes all real number aswell)
+    
+    $Set of values$: All positive real numbers
   \end{solution}
   
   \part[5] Explain whether $f$ is a function from the set of all bit strings to the set of integers if $f(S)$ is the smallest $i \in \mathbb{Z}$� such that the $i$th bit of S is 1 and $f(S) = 0$ when S is the empty string. 
   
   \begin{solution}
-    % Write your solution here
+    To be a function it has to have a one to one correspondence, but in this case, f can't be a function. As one of the bitstrings      doesn't map to any integer. If a bitstring contains no 1s in it like $f(0000)$ then it doesn't have a value which it could map to. Thus f can't be a function. 
   \end{solution}
 
   \part[15] For $X,Y \in S$, explain why (or why not) the following define an equivalence relation on $S$:
@@ -65,7 +80,13 @@
   \end{subparts}
 
   \begin{solution}
-    % Write your solution here
+    (i) If we assume that X=Y which means we are referring to the same person then the relation is reflexive as X will be there and itself will be there. If they are different individuals then relation is not reflexive. They have a symmetric relation as changing the order won't make a difference in the logic of the statement as X and Y have been in the class together is same as the Y and X has been in class together. The relation is not transitive as if we consider that X and Y have been in class together and Y and Z have been in class together then it doesn't necessarily has to be the same class which X and Y were in. As all three of the relations aren't true we can't say it a equivalence relation. 
+    
+     (ii) If we assume that X=Y which means we are referring to the same word then the relation is reflexive that is X rhymes with itself. If they are different words then the relation is not reflexive. They have a symmetric relation as changing the order won't make a difference in the logic of the statement as X and Y rhyme is exactly the same as the Y and X rhyme. The relation is absolutely transitive as if we consider that X and Y rhyme and Y and Z rhyme then the statement X and Z rhyme is definitely True. As all three of the relations are True, we can say it a equivalence relation. 
+     
+     (iii)If we assume that X=Y which means we are referring to the same set then the relation is reflexive. If they are different sets then relation is not reflexive. We can refer the statement $X \subseteq  Y$ and $Y \subseteq X$ as true if Y=X. If one of them is a proper subset then the relation doesn't hold. Here changing the order will make a difference in the logic of the statement if $X \neq Y$ . The relation is absolutely transitive as if we consider that$X \subseteq Y$ and $Y \subseteq Z$ then the statement $X \subseteq Z$ is definitely true. As all three of the relations are true on certain conditions mentioned above then we can say it an equivalence relation. 
+    
+    
   \end{solution}
 
 \end{parts}
@@ -73,7 +94,7 @@
 %Long questions (75)
 \question[15] Let $A = f^{-1}(B)$. Prove that $f(A) \subseteq B$.
   \begin{solution}
-    % Write your solution here
+        We know that $A = f^{-1}(B)$, as the inverse of B exists which means that the function is a bijective one. So we can map image to the domain and domain to the image. This clearly means that $A = f^{-1}(B)$ can be written as  $B = f(A)$ which thereby proves that $f(A) \subseteq B$. 
   \end{solution}
 
 \question[15] Consider $[n] = \{1,2,3,...,n\}$ where $n \in \mathbb{N}$. Let $A$ be the set of subsets of $[n]$ that have even size, and let $B$ be the set of subsets of $[n]$ that have odd size. Establish a bijection from $A$ to $B$, thereby proving $|A| = |B|$. (Such a bijection is suggested below for $n = 3$) 
@@ -88,7 +109,26 @@
 \end{center}
 
   \begin{solution}
-    % Write your solution here
+    Bijection needs a prove for injection and surjection.  Now we can clearly notice a pattern which is in the odd-sized subsets. There are two cases of mapping. Firstly, a subset in set B maps exactly as a subset of A but with compliment of $\{n\}$ in the case if subset of A already has $\{n\}$. Secondly, the subset in set B maps exactly as a subset of A but with union $\{n\}$ in the case if the subset of A is without $\{n\}$. To prove the function is injective, we need to consider two arbitrary elements from set A and set B. let $x \in A$ and $y \in B$. So x and y are therefore two subsets from A and B.
+
+First case:
+$f(x)=f(y)$
+
+x − $\{n\}$ = y −  $\{n\}$
+
+$x=y$ 
+
+Second case:
+$f(x)=f(y)$
+
+$x\cup \{n\}=y \cup \{n\}$
+
+$x=y$ 
+
+In both the cases, the function is proven injective. 
+
+For the function to be surjective, we know that everything in the image has to map to something in the domain. So let $b \in B$. If (b has n) then (b without n) must be a subset of even-sized set, where as if (b doesn't contains n) then (b with n) must be a subset of even-sized set. We know that under a function even-sized set maps odd-sized one  and we also know that everything in the odd-sized one has something  to map back to in even-sized one which proves the function to be surjective. As we have proved bijection, this means that they both the sets share same cardinality. 
+
   \end{solution}
   
 \question Mushrooms play a vital role in the biosphere of our planet. They also have recreational uses, such as in understanding the mathematical series below. A mushroom number, $M_n$, is a figurate number that can be represented in the form of a mushroom shaped grid of points, such that the number of points is the mushroom number. A mushroom consists of a stem and cap, while its height is the combined height of the two parts. Here is $M_5=23$:
@@ -121,11 +161,33 @@ Study the first five mushrooms carefully and make sure you can draw subsequent o
   \begin{parts}
     \part[15] Derive a closed-form for $M_n$ in terms of $n$.
   \begin{solution}
-    % Write your solution here
+   Patterns:
+We can clearly observe the pattern in the mushroom for n till 5 thus we can derive out the formula. 
+
+$No of dots:(1,2,3,4,5,6) $
+
+cap-  width   :  $(2,3,4,5,6,7) formula: n+1$
+
+cap - height   : $(1,2,2,3,3,4) formula:\lc (n+1)/2 \rc$
+
+$stem- height:(0,1,2,3,4,5) formula: n-1$
+
+
+Now in-order to get the closed formula we can work out through summations. By noticing the trend it is clear that total number of dots are 2times the stem height plus the summation of dots in the cap of mushrooms. The total dots in the cap of mushroom can be taken by (class width-class height +1) which will give the top most row in the cap. By adding 1 to the dots in the top most row times the class height will give us total dots in cap. As the cap follows a pattern. So we can write the formula as:
+
+
+$stemheight*2 +  \sum_{\mathclap{ (class width - class height + 1) }}^{class height} j \\ $
+
+
+$(n-1)*2 +  \sum_{\mathclap{ (n+1)-(\lc (n+1)/2 \rc) +1) }}^{\lc (n+1)/2 \rc} j \\ $
+    
   \end{solution}
     \part[5] What is the total height of the $20$th mushroom in the series? 
   \begin{solution}
-    % Write your solution here
+      Total height will be stem height + cap height:
+    
+    Substituting 20 in n: $(20-1)+\lc((20+1)/2)\rc = 30 $
+
   \end{solution}
 \end{parts}
 
@@ -153,12 +215,21 @@ The \href{http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibGen.ht
   \part[10] To begin, prove that the Fibonacci series is countable.
  
     \begin{solution}
-    % Write your solution here
+    We know that an infinite set is countable, if it has the same cardinality as the set of natural numbers. So in order to have same caridinality we must be able to list infinite elements of the series. Fibonacci series is enumerable which means it has a program which can generate infinite series . As we can list all the numbers this means the sequence $fib=\{1,2,3,5....\}$ is countable. The infinite sequence implies that there are as many natural numbers as there are elements of fibonacci. We can also prove it through bijection from the set of Natural numbers(N) to the set of Fibonacci series by mapping each natural number n to each unique element in fibonacci sequence.The infinite list of elements will have one to one correspondence with infinite natural numbers this means they are injective: 
+    
+    N: $0   1   2 ......$
+     
+
+    F: $1   2   3 ......$
+    
+    Everything in the image can be mapped something in the domain so this shows the prove of being surjective aswell. As there is an (injection and surjection) of fibonnacci's formula with the natural set we can prove its countibilty. 
   \end{solution}
   \part[15] Consider the Modified Wythoff as any array derived from the original, where each entry of the leading diagonal (marked in blue) of the original 2D-Array is replaced with an integer that does not occur in that row. Prove that the Modified Wythoff Array is countable. 
 
   \begin{solution}
-    % Write your solution here
+     To get the modified 2D array , we will pick an element from any row other than the one whose leading element we are replacing. Like to replace 1 we can pick any element from the rows below it. We can be sure that the number won't exist in the row as the original series itself guarantees that every number occurs exactly once.
+    
+    The Wythoff array is an infinite 2D array which means the rows will go on infinitely and same is the case for the column. We can list the elements in the series vertically or horizontally for this reason, but we know that the diagonals of the series are finite. Being finite, we can traverse the sequence diagonally. Going back to top and down the diagonal is a convenient way of listing  all elements of the series except the ones which has already been traversed. Thus, there will be no repetition in the list of this infinite array. As we can list all the numbers this means the array is countable.
   \end{solution}
 \end{parts}
 
